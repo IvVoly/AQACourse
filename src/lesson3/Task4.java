@@ -4,11 +4,11 @@ public class Task4 {
     public static void main(String[] args) {
         String check = "ABCDEFGHIJK";
         check = check.toLowerCase();
-        final String vowels = "aoieuy";
+        final String VOWELS = "aoieuy";
         char[] checkArr = check.toCharArray();
         StringBuilder finString = new StringBuilder();
         for (char i : checkArr) {
-            if(vowels.indexOf(i) == -1) {
+            if(VOWELS.indexOf(i) == -1) {
                 finString.append(i);
             }
         }
