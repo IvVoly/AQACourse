@@ -9,6 +9,15 @@ public class Town {
     int houses;
     int region;
 
+    static String country;
+
+    static int year;
+
+    static {
+        country = "USA";     // static initialization block
+        year = 2022;
+    }
+
     {
         houses = 500;     //initialization block
         region = 1;
