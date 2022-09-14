@@ -19,12 +19,13 @@ public class Task6 {
     public static void readData() {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> data = new ArrayList<>();
+        System.out.println("Enter the numbers or enter some text, instead of a number, and programm will stop: ");
         while (true) {
             try {
                 int x = Integer.parseInt(scanner.nextLine());
                 data.add(x);
             } catch (NumberFormatException e) {
-                System.out.println("Enter a number !");
+                System.err.println("Stopped, entered numbers: ");
                 for (int i : data) {
                     System.out.println(i);
                 }
