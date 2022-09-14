@@ -10,15 +10,12 @@ public class Task3 {
 
         try {
             int b = 10 / a;
+            int[] c = {1};
+            System.out.println(c[1]);
         } catch (ArithmeticException e) {
             e.printStackTrace();
-        }
-        int[] c = {1};
-        try {
-            System.out.println(c[1]);
         } catch (ArrayIndexOutOfBoundsException ex) {
             ex.printStackTrace();
         }
-
     }
 }
