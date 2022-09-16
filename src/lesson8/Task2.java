@@ -8,14 +8,18 @@ public class Task2 {
         System.out.println(divideByZero());
     }
 
-    public static int divideByZero() {
+    public static int divideByZero() throws ArithmeticException {
         int a = 5;
         int b = 0;
         try {
             return a / b;
         } catch (ArithmeticException e) {
-            System.out.println("DIVIDE BY ZERO!");
-            return 0;
+            throw new DivideZeroException("YOU DIVIDE 'a' by ZERO !!! ");
+        }
+    }
+    public static class DivideZeroException extends RuntimeException {
+        public DivideZeroException(String message) {
+            super(message);
         }
     }
 }
