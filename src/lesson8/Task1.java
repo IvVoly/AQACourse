@@ -9,12 +9,16 @@ throw your own exception.
 public class Task1 {
 
     static void method(int number) {
-        if (number < 0) {
-            System.out.println("Number < 0");
-        } else if (number > 0) {
-            System.out.println("Number > 0");
-        } else if (number == 0) {
-            throw new ArithmeticException();
+        switch (number) {
+            case (0):
+                throw new ArithmeticException();
+            default:
+                if (number > 0) {
+                    System.out.println("Number > 0");
+                } else {
+                    System.out.println("Number < 0");
+                }
+                break;
         }
     }
 
@@ -25,3 +29,4 @@ public class Task1 {
     public static class ArithmeticException extends RuntimeException {
     }
 }
+
